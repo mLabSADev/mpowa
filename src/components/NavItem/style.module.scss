@@ -1,0 +1,33 @@
+.main {
+    box-sizing: border-box;
+    width: auto; /* 245px */
+    height: auto; /* 88px */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 9px 20px;
+    margin: 0px 10px;
+    background-color: #1d1f20;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+    .label {
+        width: auto; /* 185px */
+        height: auto; /* 28px */
+        flex-shrink: 0;
+        white-space: pre;
+        overflow: visible;
+        font-style: normal;
+        font-family: "Poppins-Thin", serif;
+        color: #ffffff;
+        font-size: 1.1em;
+        margin: 0;
+    }
+}
+.main:hover {
+    transition: ease-in-out 0.3s;
+    background-color: #414242;
+}

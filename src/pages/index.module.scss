@@ -1,0 +1,95 @@
+.logoWrapper {
+    box-sizing: border-box;
+    height: auto; /* 386px */
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 97px 120px 97px 120px;
+    overflow: visible;
+    .logoStyle {
+        width: 192px;
+        height: 192px;
+    }
+}
+.descWrapper {
+    box-sizing: border-box;
+    width: auto; /* 624px */
+    height: auto; /* 136px */
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0px 108px 0px;
+    overflow: visible;
+    .descStyling {
+        width: auto; /* 624px */
+        height: auto; /* 28px */
+        flex-shrink: 0;
+        white-space: pre;
+        overflow: visible;
+        font-weight: 400;
+        font-style: normal;
+        font-family: "Poppins-Thin", serif;
+        color: #ffffff;
+        font-size: 1.25em;
+        letter-spacing: 0px;
+    }
+}
+.navigation {
+    position: -webkit-sticky; /* Safari */
+    top: 0;
+    position: sticky;
+    box-sizing: border-box;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.089);
+    z-index: 100;
+    backdrop-filter: blur(13px);
+}
+.col {
+    box-sizing: border-box;
+    flex: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 70px;
+    overflow: visible;
+    .phoneImage {
+        flex-shrink: 0;
+        width: 512px;
+        height: 642px;
+        overflow: visible;
+    }
+}
+.cardWrapper {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: visible;
+}
+.statWrapper {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 90px;
+  }

@@ -1,0 +1,30 @@
+.stack {
+    box-sizing: border-box;
+    width: auto; /* 148px */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 25px 20px 25px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #545454;
+    margin: 20px 0px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    .learnMore {
+        width: auto; /* 98px */
+        flex-shrink: 0;
+        white-space: pre;
+        overflow: visible;
+        font-style: normal;
+        font-family: "Poppins-Regular", serif;
+        color: #ffffff;
+        font-size: 1em;
+        margin: 0;
+      }
+  }
+  .stack:hover {
+      transition: ease-in-out 0.3s;
+      background: #545454;
+  }
