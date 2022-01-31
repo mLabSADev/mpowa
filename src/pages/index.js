@@ -110,7 +110,7 @@ const IndexPage = (data) => {
                 <div className="line"></div>
               </div>
               <p className="bodyText">mPowa, a member of the SA Youth Network, is a mobile app for South African youth, providing them with location-based and profile-specific information about services relating to employment, education and entrepreneurship in their vicinity.</p>
-              <Button text="Learn More"></Button>
+              <Button text="Learn More" link="/about"></Button>
             </div>
           </div>
           <div className={col} style={{ paddingBottom: 0 }}>
@@ -132,7 +132,7 @@ const IndexPage = (data) => {
               return (<Card key={i} color={c.color} title={c.title} text={c.text} icon={c.icon} />)
             })}
           </div>
-          <Button text="Learn More"></Button>
+          <Button text="Learn More" link="/about"></Button>
         </section>
         <section id="second" className="section" style={{ flexDirection: 'column' }}>
           <div className="sectionHeader">
