@@ -34,7 +34,7 @@ body {
     font-style: normal;
     font-family: "Poppins", serif;
     color: #ffffff;
-    font-size: 36px;
+    font-size: 2.1em;
     letter-spacing: 0px;
     margin: 0;
 }
@@ -95,6 +95,7 @@ body {
     border-right-width: 0px;
     padding: 20px 100px 0px 100px;
 }
+
 .lineWrapper {
     box-sizing: border-box;
     width: 100%;
@@ -131,4 +132,22 @@ body {
     background-color: #1d1f20a2;
     overflow: visible;
     border-radius: 10px;
+}
+@media only screen and (max-width: 400px) {
+    .section {
+        padding: 20px 20px 0px 20px;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 541px) {
+    .section {
+        padding: 20px 20px 0px 20px;
+        flex-direction: column;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .section {
+        padding: 20px 20px 0px 20px;
+        flex-direction: column;
+    }
 }

@@ -1,19 +1,8 @@
 import React from 'react';
-import Footer from '../components/Footer/Footer';
 import Layout from '../components/layout';
 import { StaticImage } from "gatsby-plugin-image"
-import { graphql, Link } from 'gatsby'
-import {
-    logoWrapper,
-    logoStyle,
-    descWrapper,
-    descStyling,
-    navigation,
-    col,
-    phoneImage,
-    cardWrapper,
-    statWrapper
-} from './index.module.scss'
+import { Link } from 'gatsby'
+import { cardWrapper } from './index.module.scss'
 const About = () => {
     return <Layout>
         <section id="cta" className="section" style={{ flexDirection: 'column', paddingBottom: 50 }}>

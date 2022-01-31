@@ -145,3 +145,36 @@
         line-height: 1.9;
     }
 }
+@media only screen and (max-width: 400px) {
+    .main {
+        .wrapper {
+            padding: 20px;
+            flex-direction: column;
+            .col {
+                padding: 0px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 541px) {
+    .main {
+        .wrapper {
+            padding: 20px;
+            flex-direction: column;
+            .col {
+                padding: 0px;
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main {
+        .wrapper {
+            padding: 20px;
+            flex-direction: column;
+            .col {
+                padding: 0px;
+            }
+        }
+    }
+}

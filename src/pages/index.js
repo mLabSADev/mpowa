@@ -12,7 +12,8 @@ import {
   col,
   phoneImage,
   cardWrapper,
-  statWrapper
+  statWrapper,
+  videoBG
 } from './index.module.scss'
 import Tab from "../components/tab"
 import NavItem from "../components/NavItem/NavItem"
@@ -85,6 +86,7 @@ const IndexPage = (data) => {
   console.log(data.data)
   return (
     <Layout>
+      
       <Tab title="Home" />
       <div className={logoWrapper}>
         <StaticImage className={logoStyle} src="../images/icon.png" />
@@ -160,13 +162,13 @@ const IndexPage = (data) => {
               <p className="bodyText">Let mPowa help you find services and events that will drive your professional career - whatever it may be. Your first step towards a brighter future starts with downloading it from the Google Play or Apple app store and setting up your account in a few easy steps.</p>
             </div>
           </div>
-          <div className={cardWrapper} style={{justifyContent: 'center'}}>
-           <Link to="https://play.google.com/store/apps/details?id=com.mlab.mpowa" target="_blank">
-           <StaticImage style={{width: 300}} src="../images/playstore.png" />
-           </Link>
-           <Link style={{width: 300}} to="https://apps.apple.com/za/app/mpowa/id1560352984" target="_blank">
-           <StaticImage src="../images/appleStore.png" />
-           </Link>
+          <div className={cardWrapper} style={{ justifyContent: 'center' }}>
+            <Link to="https://play.google.com/store/apps/details?id=com.mlab.mpowa" target="_blank">
+              <StaticImage style={{ width: 300 }} src="../images/playstore.png" />
+            </Link>
+            <Link style={{ width: 300 }} to="https://apps.apple.com/za/app/mpowa/id1560352984" target="_blank">
+              <StaticImage src="../images/appleStore.png" />
+            </Link>
           </div>
         </section>
       </div>

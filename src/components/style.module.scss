@@ -1,12 +1,28 @@
 .layout {
-    box-sizing: border-box;
-    width: 100%; /* 1920px */
-    height: auto; /* 4269px */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0px 100px 0px 100px;
-    overflow: visible;
-    background-color: black;
+  box-sizing: border-box;
+  width: 100%; /* 1920px */
+  height: auto; /* 4269px */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 100px 0px 100px;
+  overflow: visible;
+  background-color: black;
+}
+.videoBG {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  width: 100%;
+}
+@media only screen and (max-width: 400px) {
+  .layout {
+    padding: 0px 20px 0px 20px;
   }
+}
+@media only screen and (max-width: 541px) {
+  .layout {
+    padding: 0px 20px 0px 20px;
+  }
+}
