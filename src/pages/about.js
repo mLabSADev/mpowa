@@ -14,7 +14,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <StaticImage style={{ width: '100%' }} src='../images/banner.jpg' />
+            <StaticImage style={{ width: '100%' }} src='../images/banner.jpg' alt="" />
             <video className='videoStyle' controls="" >
                 <source src="https://firebasestorage.googleapis.com/v0/b/youth-services-platform.appspot.com/o/Blueprint%20June%202021%20mPowa.mp4?alt=media&amp;token=ff928a46-4382-4635-a670-bb28f73c88ec" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -37,10 +37,10 @@ const About = () => {
             </div>
             <div className={cardWrapper} style={{ justifyContent: 'center' }}>
                 <Link to="https://play.google.com/store/apps/details?id=com.mlab.mpowa" target="_blank">
-                    <StaticImage style={{ width: 300 }} src="../images/playstore.png" />
+                    <StaticImage style={{ width: 300 }} src="../images/playstore.png" alt="" />
                 </Link>
                 <Link style={{ width: 300 }} to="https://apps.apple.com/za/app/mpowa/id1560352984" target="_blank">
-                    <StaticImage src="../images/appleStore.png" />
+                    <StaticImage src="../images/appleStore.png" alt="" />
                 </Link>
             </div>
         </section>

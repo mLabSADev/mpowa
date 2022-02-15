@@ -15,6 +15,9 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+#gatsby-focus-wrapper {
+    /* display: none; */
+}
 html {
     scroll-behavior: smooth !important;
     background: black;
@@ -120,6 +123,23 @@ body {
         rgba(240, 255, 48, 1) 100%
     );
     overflow: visible;
+    position: relative;
+    border-radius: 8px;
+}
+.line::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        94deg,
+        rgba(89, 205, 59, 1) 0%,
+        rgba(63, 141, 195, 1) 33%,
+        rgba(255, 60, 60, 1) 71%,
+        rgba(240, 255, 48, 1) 100%
+    );
+    top: 3px;
+    filter: blur(6px);
 }
 .roundedMain {
     height: auto; /* 3727px */
@@ -132,6 +152,28 @@ body {
     background-color: #1d1f20a2;
     overflow: visible;
     border-radius: 10px;
+}
+.appBG {
+    background: linear-gradient(#171717d2, #171717d2), url("../images/sandro-katalina-k1bO_VTiZSs-unsplash.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    animation-name: BG;
+    animation-duration: 1s;
+}
+@keyframes BG {
+    0% {
+        background: linear-gradient(#171717d2, #171717d2), url("../images/gradienta-tHtZo3FLhPc-unsplash.jpg");
+    }
+    25% {
+        background: linear-gradient(#171717d2, #171717d2), url("../images/sandro-katalina-k1bO_VTiZSs-unsplash.jpg");
+    }
+    50% {
+        background: linear-gradient(#171717d2, #171717d2), url("../images/ricardo-gomez-angel-GsZLXA4JPcM-unsplash.jpg");
+    }
+    100% {
+        background: linear-gradient(#171717d2, #171717d2), url("../images/scott-rodgerson-z0MDyylvY1k-unsplash.jpg");
+    }
 }
 @media only screen and (max-width: 400px) {
     .section {

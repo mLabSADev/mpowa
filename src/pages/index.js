@@ -8,38 +8,21 @@ import {
   logoStyle,
   descWrapper,
   descStyling,
-  navigation,
   col,
   phoneImage,
   cardWrapper,
-  statWrapper,
-  videoBG
+  statWrapper
 } from './index.module.scss'
 import Tab from "../components/tab"
-import NavItem from "../components/NavItem/NavItem"
-import Button from "../components/Button/Button"
+import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
+import Button from '@mui/material/Button';
+import cButton from "../components/Button/Button"
 import Card from "../components/Card/Card"
 import Stats from "../components/Stats/Stats"
 import { faCodeBranch, faFolderOpen, faSignal, faLaptop, faGem, faRocket, faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
-
-// markup
-const links = [{
-  label: 'What is mPowa',
-  id: 'intro',
-  link: ''
-}, {
-  label: 'What will you find?',
-  id: 'first',
-  link: ''
-}, {
-  label: 'Services',
-  id: 'second',
-  link: ''
-}, {
-  label: 'Download the App',
-  id: 'cta',
-  link: ''
-}]
+import Navigation from "../components/Navigation/Navigation"
+import NewsItem from "../components/NewsCard/NewsItem"
+import Stack from '@mui/material/Stack';
 const CARD = [{
   title: 'Employment',
   icon: faBriefcase,
@@ -83,13 +66,12 @@ const STATS = [{
   color: '#000000'
 },]
 const IndexPage = (data) => {
-  console.log(data.data)
+  console.log(data)
   return (
     <Layout>
-      
       <Tab title="Home" />
       <div className={logoWrapper}>
-        <StaticImage className={logoStyle} src="../images/icon.png" />
+        <StaticImage className={logoStyle} src="../images/icon.png" alt="" />
       </div>
       <div className={descWrapper}>
         <p className={descStyling}>
@@ -97,14 +79,9 @@ const IndexPage = (data) => {
         </p>
       </div>
       <div className="roundedMain">
-        <div className={navigation}>
-          {links.map((c, i) => {
-            return (
-              <NavItem key={i} text={c.label} id={c.id}></NavItem>
-            )
-          })}
-        </div>
+        <Navigation />
         <section id="intro" className="section">
+
           <div className={col}>
             <div>
               <p className="pageTitle">What is mPowa?</p>
@@ -112,7 +89,7 @@ const IndexPage = (data) => {
                 <div className="line"></div>
               </div>
               <p className="bodyText">mPowa, a member of the SA Youth Network, is a mobile app for South African youth, providing them with location-based and profile-specific information about services relating to employment, education and entrepreneurship in their vicinity.</p>
-              <Button text="Learn More" link="/about"></Button>
+              <cButton text="Learn More" link="/about"></cButton>
             </div>
           </div>
           <div className={col} style={{ paddingBottom: 0 }}>
@@ -134,7 +111,7 @@ const IndexPage = (data) => {
               return (<Card key={i} color={c.color} title={c.title} text={c.text} icon={c.icon} />)
             })}
           </div>
-          <Button text="Learn More" link="/about"></Button>
+          <cButton text="Learn More" link="/about"></cButton>
         </section>
         <section id="second" className="section" style={{ flexDirection: 'column' }}>
           <div className="sectionHeader">
@@ -155,7 +132,29 @@ const IndexPage = (data) => {
         <section id="cta" className="section" style={{ flexDirection: 'column', paddingBottom: 50 }}>
           <div className="sectionHeader">
             <div className="titleLineWrapper">
-              <p className="pageTitle">Download the app</p>
+              <p className="pageTitle">News</p>
+              <div className="lineWrapper" style={{ justifyContent: 'center' }}>
+                <div className="line"></div>
+              </div>
+              <p className="bodyText">Let mPowa help you find services and events that will drive your professional career - whatever it may be. Your first step towards a brighter future starts with downloading it from the Google Play or Apple app store and setting up your account in a few easy steps.</p>
+            </div>
+          </div>
+
+          <Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
+            <NewsItem />
+            <NewsItem />
+            <NewsItem />
+          </Stack>
+          <Stack sx={{ p: 5 }}>
+            <Button variant="outlined" endIcon={<ChevronRightRoundedIcon />}>
+              View All
+            </Button>
+          </Stack>
+        </section>
+        <section id="cta" className="section appBG" style={{ flexDirection: 'column', paddingBottom: 50 }}>
+          <div className="sectionHeader">
+            <div className="titleLineWrapper">
+              <p className="pageTitle">Download the App</p>
               <div className="lineWrapper" style={{ justifyContent: 'center' }}>
                 <div className="line"></div>
               </div>
@@ -164,13 +163,14 @@ const IndexPage = (data) => {
           </div>
           <div className={cardWrapper} style={{ justifyContent: 'center' }}>
             <Link to="https://play.google.com/store/apps/details?id=com.mlab.mpowa" target="_blank">
-              <StaticImage style={{ width: 300 }} src="../images/playstore.png" />
+              <StaticImage style={{ width: 300 }} src="../images/playstore.png" alt="" />
             </Link>
             <Link style={{ width: 300 }} to="https://apps.apple.com/za/app/mpowa/id1560352984" target="_blank">
-              <StaticImage src="../images/appleStore.png" />
+              <StaticImage src="../images/appleStore.png" alt="" />
             </Link>
           </div>
         </section>
+
       </div>
     </Layout>
   )
@@ -179,8 +179,9 @@ const IndexPage = (data) => {
 export default IndexPage
 
 export const query = graphql`
-query HomeQuery { whatIsMpowa: markdownRemark {
-    whatIsMpowa: frontmatter {
+query HomeQuery {
+  markdownRemark(fileAbsolutePath: {regex: "/(whatIsmPowa)/"}) {
+    frontmatter {
       title
       description
     }
