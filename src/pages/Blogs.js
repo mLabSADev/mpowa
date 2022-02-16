@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import { cardWrapper } from './Blogs.module.scss'
 import NewsItem from '../components/NewsCard/NewsItem'
 import Stack from '@mui/material/Stack';
