@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   main,
   top,
@@ -19,16 +19,13 @@ import MoreVertRoundedIcon from '@mui/icons-material/MoreVertRounded';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import LinkRoundedIcon from '@mui/icons-material/LinkRounded';
 import IconButton from '@mui/material/IconButton';
-import ImageBG from '../../images/scott-rodgerson-z0MDyylvY1k-unsplash.jpg'
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import { Link } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image"
 function NewsItem(data) {
-  const [popup, setPopupState] = useState(false)
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -38,7 +35,6 @@ function NewsItem(data) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  console.log('The big c >>> ', data)
   const NODE = data.data.node
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;

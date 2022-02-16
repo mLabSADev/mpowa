@@ -6,14 +6,8 @@ import { cardWrapper } from './index.module.scss'
 import Navigation from '../components/Navigation/Navigation';
 const About = () => {
     return <Layout>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <div className="roundedMain">
+            <Navigation />
             <section id="cta" className="section" style={{ flexDirection: 'column', paddingBottom: 50 }}>
                 <div className="sectionHeader">
                     <div className="titleLineWrapper">

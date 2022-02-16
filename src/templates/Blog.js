@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { StaticImage } from 'gatsby-plugin-image'
+import CustomButton from '../components/Button/Button'
 import { col, phoneImage } from './Blog.module.scss'
 import { Stack } from '@mui/material'
 import { graphql } from 'gatsby'
@@ -19,7 +19,7 @@ function Blog({ data }) {
                 <div className="line"></div>
               </div>
               <p className="bodyText">{data.markdownRemark.excerpt}</p>
-              <cButton text="Learn More" link="/about"></cButton>
+              <CustomButton text="Learn More" link="/about"></CustomButton>
             </div>
           </div>
           <div className={col} style={{ paddingBottom: 0 }}>

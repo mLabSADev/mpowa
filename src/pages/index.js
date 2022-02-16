@@ -16,7 +16,7 @@ import {
 import Tab from "../components/tab"
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import Button from '@mui/material/Button';
-import cButton from "../components/Button/Button"
+import CustomButton from "../components/Button/Button"
 import Card from "../components/Card/Card"
 import Stats from "../components/Stats/Stats"
 import { faCodeBranch, faFolderOpen, faSignal, faLaptop, faGem, faRocket, faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
@@ -91,7 +91,7 @@ const IndexPage = (data) => {
                 <div className="line"></div>
               </div>
               <p className="bodyText">mPowa, a member of the SA Youth Network, is a mobile app for South African youth, providing them with location-based and profile-specific information about services relating to employment, education and entrepreneurship in their vicinity.</p>
-              <cButton text="Learn More" link="/about"></cButton>
+              <CustomButton text="Learn More" link="/about"></CustomButton>
             </div>
           </div>
           <div className={col} style={{ paddingBottom: 0 }}>
@@ -113,7 +113,7 @@ const IndexPage = (data) => {
               return (<Card key={i} color={c.color} title={c.title} text={c.text} icon={c.icon} />)
             })}
           </div>
-          <cButton text="Learn More" link="/about"></cButton>
+          <CustomButton text="Learn More" link="/about"></CustomButton>
         </section>
         <section id="second" className="section" style={{ flexDirection: 'column' }}>
           <div className="sectionHeader">
