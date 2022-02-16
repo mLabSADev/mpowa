@@ -19,7 +19,6 @@ function Blog({ data }) {
                 <div className="line"></div>
               </div>
               <p className="bodyText">{data.markdownRemark.excerpt}</p>
-              <CustomButton text="Learn More" link="/about"></CustomButton>
             </div>
           </div>
           <div className={col} style={{ paddingBottom: 0 }}>
