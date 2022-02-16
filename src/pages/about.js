@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from 'gatsby'
 import { cardWrapper } from './index.module.scss'
+import Navigation from '../components/Navigation/Navigation';
 const About = () => {
     return <Layout>
         <section id="cta" className="section" style={{ flexDirection: 'column', paddingBottom: 50 }}>

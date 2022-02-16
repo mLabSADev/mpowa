@@ -1,0 +1,17 @@
+.col {
+    box-sizing: border-box;
+    flex: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 70px;
+    overflow: visible;
+    .phoneImage {
+        flex-shrink: 0;
+        width: 100%;
+        height: 642px;
+        overflow: visible;
+    }
+}

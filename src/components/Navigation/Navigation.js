@@ -3,26 +3,18 @@ import { navigation } from './style.module.scss'
 import NavItem from '../NavItem/NavItem'
 function Navigation() {
     const links = [{
-        label: 'What is mPowa',
+        label: 'Home',
         id: 'intro',
-        link: ''
+        link: '/'
     }, {
-        label: 'What will you find?',
+        label: 'About',
         id: 'first',
-        link: ''
-    }, {
-        label: 'Services',
-        id: 'second',
-        link: ''
-    }, {
-        label: 'Download the App',
-        id: 'cta',
-        link: ''
+        link: '/about'
     },
     {
         label: 'Blogs',
         id: 'blogs',
-        link: '/Blog'
+        link: '/Blogs'
     }]
     return (
         <div className={navigation}>

@@ -25,7 +25,8 @@ import ImageBG from '../../images/scott-rodgerson-z0MDyylvY1k-unsplash.jpg'
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-function NewsItem() {
+import { Link } from 'gatsby';
+function NewsItem(data) {
   const [popup, setPopupState] = useState(false)
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -36,14 +37,14 @@ function NewsItem() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
+  const NODE = data.data.node
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
   return (
     <div className={main}>
       <div className={top}>
         <div className={dateWrapper}>
-          <p className={dateStyle}>Feb 10</p>
+          <p className={dateStyle}>{NODE.frontmatter.date}</p>
         </div>
         <div className={more}>
 
@@ -86,8 +87,11 @@ function NewsItem() {
       <div className={articleWrapper}>
         <div className={content}>
           <div className={title}>
-            <p className={titleStyle}>Why the balance of power in tech is shifting toward workers</p>
-            <p className={descStyle}>A record number of tech worker unions formed in the US last year. They’re part of a global effort.</p>
+
+            <Link className={titleStyle} to={`/Blogs${NODE.frontmatter.path}`} >
+              {NODE.frontmatter.title.replaceAll('-', ' ')}
+            </Link>
+            <p className={descStyle}>{NODE.excerpt}</p>
           </div>
           <div className={author}>
             <p className={authorStyle}>by Jane Doe</p>
