@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import CustomButton from '../components/Button/Button'
 import { col, phoneImage } from './Blog.module.scss'
 import { Stack } from '@mui/material'
 import { graphql } from 'gatsby'

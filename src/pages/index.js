@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql, Link } from 'gatsby'
 import "./style.css"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import {
   logoWrapper,
