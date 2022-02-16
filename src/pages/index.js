@@ -23,6 +23,7 @@ import { faCodeBranch, faFolderOpen, faSignal, faLaptop, faGem, faRocket, faBrie
 import Navigation from "../components/Navigation/Navigation"
 import NewsItem from "../components/NewsCard/NewsItem"
 import Stack from '@mui/material/Stack';
+import { getImage } from "gatsby-plugin-image"
 const CARD = [{
   title: 'Employment',
   icon: faBriefcase,
@@ -66,7 +67,8 @@ const STATS = [{
   color: '#000000'
 },]
 const IndexPage = (data) => {
-  console.log(data)
+  const NEWS = data.data.news.edges
+  console.log()
   return (
     <Layout>
       <Tab title="Home" />
@@ -141,13 +143,15 @@ const IndexPage = (data) => {
           </div>
 
           <Stack spacing={2} direction={{ xs: 'column', sm: 'row' }}>
-            <NewsItem />
-            <NewsItem />
-            <NewsItem />
+            {NEWS.map(c => {
+              const image = getImage(c.node.frontmatter.thumb)
+              return (<NewsItem data={c} image={image} key={c.node.frontmatter.path} />)
+            })}
           </Stack>
           <Stack sx={{ p: 5 }}>
             <Button variant="outlined" endIcon={<ChevronRightRoundedIcon />}>
-              View All
+              <Link to="/Blogs">View All
+              </Link>
             </Button>
           </Stack>
         </section>
@@ -179,13 +183,29 @@ const IndexPage = (data) => {
 export default IndexPage
 
 export const query = graphql`
-query HomeQuery {
-  markdownRemark(fileAbsolutePath: {regex: "/(whatIsmPowa)/"}) {
-    frontmatter {
-      title
-      description
+query HomeQuery  {
+  news: allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/(news)/"}}
+    sort: {fields: frontmatter___date, order: DESC}
+    limit: 3
+  ) {
+    edges {
+      node {
+        excerpt
+        frontmatter {
+          path
+          title
+          date
+          author
+          thumb {
+            childImageSharp {
+              gatsbyImageData(quality: 100, width: 500, formats: AUTO, placeholder: BLURRED)
+            }
+          }
+        }
+        id
+      }
     }
   }
 }
-
 `

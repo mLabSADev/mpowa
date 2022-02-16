@@ -6,36 +6,49 @@ import NewsItem from '../components/NewsCard/NewsItem'
 import Stack from '@mui/material/Stack';
 import { graphql } from 'gatsby'
 import Navigation from '../components/Navigation/Navigation'
-function Blogs({data}) {
+import { getImage } from "gatsby-plugin-image"
+function Blogs({ data }) {
   return (
     <Layout>
-      <section id="cta" className="section appBG" style={{ flexDirection: 'column', paddingBottom: 50 }}>
-        <div className="sectionHeader">
-          <div className="titleLineWrapper">
-            <p className="pageTitle">Blogs</p>
-            <div className="lineWrapper" style={{ justifyContent: 'center' }}>
-              <div className="line"></div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className="roundedMain">
+        <Navigation />
+        <section id="cta" className="section " style={{ flexDirection: 'column', paddingBottom: 50 }}>
+          <div className="sectionHeader">
+            <div className="titleLineWrapper">
+              <p className="pageTitle">Blogs</p>
+              <div className="lineWrapper" style={{ justifyContent: 'center' }}>
+                <div className="line"></div>
+              </div>
+              <p className="bodyText"></p>
             </div>
-            <p className="bodyText"></p>
           </div>
-        </div>
-        <Stack direction={{ xs: 'column', sm: 'row' }}
-          spacing={{ xs: 1, sm: 2, md: 4 }}>
-
-        </Stack>
+          <Stack direction={{ xs: 'column', sm: 'row' }}
+            spacing={{ xs: 1, sm: 2, md: 4 }}>
+          </Stack>
+        </section>
         <div className={cardWrapper} style={{ justifyContent: 'center' }}>
-          {data.news.edges.map((c, i) => {
-            return (<NewsItem data={c} key={i} />)
+          {data.news.edges.map((c) => {
+            const image = getImage(c.node.frontmatter.thumb)
+            console.log(c)
+            return (<NewsItem data={c} image={image} key={c.node.frontmatter.path} />)
           })}
         </div>
-      </section>
+      </div>
+
     </Layout>
   )
 }
 
 export default Blogs
 export const query = graphql`
-query MyQuery {
+query BlogsQuery {
   news: allMarkdownRemark(
     filter: {fileAbsolutePath: {regex: "/(news)/"}}
     sort: {fields: frontmatter___date, order: DESC}
@@ -48,11 +61,15 @@ query MyQuery {
           title
           date
           author
+          thumb {
+            childImageSharp {
+              gatsbyImageData(quality: 100, width: 500, formats: AUTO, placeholder: BLURRED)
+            }
+          }
         }
         id
       }
     }
   }
 }
-
 `

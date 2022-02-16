@@ -26,6 +26,7 @@ import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import { Link } from 'gatsby';
+import { GatsbyImage } from "gatsby-plugin-image"
 function NewsItem(data) {
   const [popup, setPopupState] = useState(false)
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -37,6 +38,7 @@ function NewsItem(data) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  console.log('The big c >>> ', data)
   const NODE = data.data.node
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
@@ -94,11 +96,12 @@ function NewsItem(data) {
             <p className={descStyle}>{NODE.excerpt}</p>
           </div>
           <div className={author}>
-            <p className={authorStyle}>by Jane Doe</p>
+            <p className={authorStyle}>by {NODE.frontmatter.author}</p>
           </div>
         </div>
         <div className={image}>
-          <img className={imageCover} src={ImageBG} alt='Article Image' />
+          <GatsbyImage className={imageCover} image={data.image} alt={NODE.frontmatter.path} />
+          {/* <img className={imageCover} src={ImageBG} alt='Article Image' /> */}
         </div>
       </div>
     </div>

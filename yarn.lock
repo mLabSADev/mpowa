@@ -6150,7 +6150,7 @@
     "lodash" "^4.17.21"
     "micromatch" "^4.0.4"
 
-"gatsby-plugin-image@^2.5.2":
+"gatsby-plugin-image@^2.7.0":
   "integrity" "sha512-IVX/c0O/5QL505hla74Pt9i7xtv5zFBeYiYqG9gyejtZ3YuM0Opid3Rs+IIn1LN3fjM/xBrqp8yL7/XN/p24fw=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-image/-/gatsby-plugin-image-2.7.0.tgz"
   "version" "2.7.0"
@@ -6261,7 +6261,7 @@
     "resolve-url-loader" "^3.1.4"
     "sass-loader" "^10.1.1"
 
-"gatsby-plugin-sharp@^4.0.0-next", "gatsby-plugin-sharp@^4.5.2":
+"gatsby-plugin-sharp@^4.0.0-next", "gatsby-plugin-sharp@^4.7.0":
   "integrity" "sha512-l1C+TB2D04yZq7f35aj4irkkSsm4HIQEQVWAED2zkoL3RrUxQ2uRT4kakulv00SdGd5/i+7btc9xOPB25DGvgA=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.7.0.tgz"
   "version" "4.7.0"
@@ -6343,7 +6343,7 @@
     "@types/sharp" "^0.29.5"
     "sharp" "^0.29.3"
 
-"gatsby-source-filesystem@^4.0.0-next", "gatsby-source-filesystem@^4.5.2":
+"gatsby-source-filesystem@^4.0.0-next", "gatsby-source-filesystem@^4.7.0":
   "integrity" "sha512-tihlE4cxAI9tQnKqCNEKbrrqRQpMP2iBJIaGhc5gGHQ45cRreJHA60HOM0Nw6IzNKkDdCz0cu9XJwgkXIG9Tyg=="
   "resolved" "https://registry.npmjs.org/gatsby-source-filesystem/-/gatsby-source-filesystem-4.7.0.tgz"
   "version" "4.7.0"
@@ -6408,7 +6408,7 @@
     "unist-util-select" "^3.0.4"
     "unist-util-visit" "^2.0.3"
 
-"gatsby-transformer-sharp@^4.5.0":
+"gatsby-transformer-sharp@^4.7.0":
   "integrity" "sha512-5t2MIm7AY0M2hrPHhxolGQZLliasZYiG0i1vke2KcW7vSZAmgmDKZBEbAiApqk8IiKFlTtcq4mv772dBx3YQwQ=="
   "resolved" "https://registry.npmjs.org/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.7.0.tgz"
   "version" "4.7.0"
