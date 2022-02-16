@@ -2,16 +2,18 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/img
-public_folder: /img
+media_folder: static/images
+public_folder: /images
 
 collections:
   name: "blog"
   label: "Blog"
-  folder: "content/blog"
+  folder: "../src/markdown/news"
   create: true
   slug: "{{path}}"
-  editor:
-    preview: false
   fields:
-    - {label: "Title", name: "title", widget: "string"}
+    - { label: "Title", name: "title", widget: "string" }
+    - { label: "Date", name: "date", widget: "date" }
+    - { label: "Image", name: "thumb", widget: "image" }
+    - { label: "Tags", name: "tags", widget: "map" }
+    - { label: "Body", name: "body", widget: "markdown" }
