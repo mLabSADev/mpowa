@@ -12,6 +12,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     `gatsby-plugin-image`,
+    "gatsby-plugin-netlify",
     "gatsby-transformer-sharp", {
       resolve: 'gatsby-source-filesystem',
       options: {
