@@ -8,14 +8,14 @@ media_folder: static/images
 public_folder: src/images
 
 collections:
-  name: "blog"
-  label: "Blog"
-  folder: "_news"
-  create: true
-  slug: "{{path}}"
-  fields:
-    - { label: "Title", name: "title", widget: "string" }
-    - { label: "Date", name: "date", widget: "date" }
-    - { label: "Image", name: "thumb", widget: "image" }
-    - { label: "Tags", name: "tags", widget: "map" }
-    - { label: "Body", name: "body", widget: "markdown" }
+  - name: "blog"
+    label: "Blog"
+    folder: "_news"
+    create: true
+    slug: "{{path}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Image", name: "thumb", widget: "image" }
+      - { label: "Tags", name: "tags", widget: "map" }
+      - { label: "Body", name: "body", widget: "markdown" }
