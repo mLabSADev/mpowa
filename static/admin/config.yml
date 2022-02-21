@@ -4,8 +4,8 @@ backend:
 
 site_url: https://mpowa.netlify.app/
 
-media_folder: images/uploads
-public_folder: images/images
+media_folder: src/images
+public_folder: src/images
 
 collections:
   - name: "blog"
