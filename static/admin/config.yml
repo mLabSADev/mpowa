@@ -12,7 +12,7 @@ collections:
     label: "Blog"
     folder: "src/markdown/news"
     create: true
-    path: "/{{year}}-{{month}}"
+    path: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "date" }
