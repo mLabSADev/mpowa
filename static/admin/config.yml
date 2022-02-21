@@ -5,14 +5,14 @@ backend:
 site_url: https://mpowa.netlify.app/
 
 media_folder: src/images
-public_folder: src/images
+public_folder: src/markdown/news
 
 collections:
   - name: "blog"
     label: "Blog"
     folder: "src/markdown/news"
     create: true
-    path: "{{year}}-{{month}}-{{day}}"
+    path: "/{{year}}-{{month}}-{{day}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "date" }
