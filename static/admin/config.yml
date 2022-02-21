@@ -10,7 +10,7 @@ public_folder: images/images
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "_news"
+    folder: "src/markdown/news"
     create: true
     path: "/{{slug}}"
     fields:
