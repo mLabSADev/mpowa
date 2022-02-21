@@ -20,7 +20,40 @@ module.exports = {
         "path": "./src/images/"
       },
       __key: "images"
-    }, {
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "noopener"
+            }
+          }
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-responsive-iframe`,
+          {
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {
+                "heading[depth=1]": "title",
+                "heading[depth=2]": "subtitle",
+                paragraph: "para",
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "pages",
