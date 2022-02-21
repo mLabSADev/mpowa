@@ -27,7 +27,6 @@ function Blog({ data }) {
         </section>
         <Stack sx={{ pl: 20, pr: 20, pt: 10, pb: 10 }}>
           <div className="bodyText" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}>
-
           </div>
         </Stack>
 
@@ -42,7 +41,7 @@ export default Blog
 export const query = graphql`
 query myQueryAndMyQuery ($article:String) {
   markdownRemark(
-    frontmatter: {path: {eq: $article}}
+    frontmatter: {title: {eq: $article}}
   ) {
     frontmatter {
       path

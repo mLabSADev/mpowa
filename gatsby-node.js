@@ -15,7 +15,11 @@ exports.createPages = async ({ actions, graphql }) => {
             edges {
               node {
                 excerpt
+                fields {
+                  slug
+                }
                 frontmatter {
+                  title
                   path
                 }
                 id
@@ -24,14 +28,12 @@ exports.createPages = async ({ actions, graphql }) => {
           }
     }
     `)
-
   data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: `/Blogs${node.frontmatter.path}`,
+      path: `${node.fields.slug}`,
       component: BlogTemplate,
       context: {
-        article: node.frontmatter.path,
-        slug: node.frontmatter.path
+        article: node.frontmatter.title,
       }
     })
   })
