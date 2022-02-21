@@ -67,7 +67,7 @@ const STATS = [{
   color: '#000000'
 },]
 const IndexPage = (data) => {
-  const NEWS = data.data.news.edges
+  const NEWS = data.data.blogs.edges
   console.log()
   return (
     <Layout>
@@ -184,14 +184,17 @@ export default IndexPage
 
 export const query = graphql`
 query HomeQuery  {
-  news: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(news)/"}}
+  blogs: allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/(Blogs)/"}}
     sort: {fields: frontmatter___date, order: DESC}
     limit: 3
   ) {
     edges {
       node {
         excerpt
+        fields {
+          slug
+        }
         frontmatter {
           path
           title

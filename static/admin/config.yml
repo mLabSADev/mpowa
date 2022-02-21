@@ -5,12 +5,12 @@ backend:
 site_url: https://mpowa.netlify.app/
 
 media_folder: src/images
-public_folder: src/markdown/news
+public_folder: src/markdown/Blogs
 
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "src/markdown/news"
+    folder: "src/markdown/Blogs"
     create: true
     path: "{{slug}}"
     fields:

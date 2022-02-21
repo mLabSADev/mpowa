@@ -7,6 +7,7 @@ import { graphql } from 'gatsby'
 import Navigation from '../components/Navigation/Navigation'
 import { getImage } from "gatsby-plugin-image"
 function Blogs({ data }) {
+  console.log(data)
   return (
     <Layout>
       <div className="roundedMain">
@@ -26,7 +27,7 @@ function Blogs({ data }) {
           </Stack>
         </section>
         <div className={cardWrapper} style={{ justifyContent: 'center' }}>
-          {data.news.edges.map((c) => {
+          {data.blogs.edges.map((c) => {
             const image = getImage(c.node.frontmatter.thumb)
             return (<NewsItem data={c} image={image} key={c.node.frontmatter.path} />)
           })}
@@ -40,13 +41,16 @@ function Blogs({ data }) {
 export default Blogs
 export const query = graphql`
 query BlogsQuery {
-  news: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(news)/"}}
+  blogs: allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/(Blogs)/"}}
     sort: {fields: frontmatter___date, order: DESC}
   ) {
     edges {
       node {
         excerpt
+        fields {
+          slug
+        }
         frontmatter {
           path
           title

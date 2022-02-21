@@ -86,7 +86,7 @@ function NewsItem(data) {
         <div className={content}>
           <div className={title}>
 
-            <Link className={titleStyle} to={`/Blogs${NODE.frontmatter.path}`} >
+            <Link className={titleStyle} to={`${NODE.fields.slug}`} >
               {NODE.frontmatter.title.replaceAll('-', ' ')}
             </Link>
             <p className={descStyle}>{NODE.excerpt}</p>
@@ -96,7 +96,7 @@ function NewsItem(data) {
           </div>
         </div>
         <div className={image}>
-          <GatsbyImage className={imageCover} image={data.image} alt={NODE.frontmatter.path} />
+          <GatsbyImage className={imageCover} image={data.image} alt={NODE.frontmatter.title} />
           {/* <img className={imageCover} src={ImageBG} alt='Article Image' /> */}
         </div>
       </div>
