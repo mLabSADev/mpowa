@@ -3,11 +3,8 @@ title: Critical skills to learn in order to get a job in South Africa
 author: Zukanye Madakana
 date: 2022-02-28T07:59:45.283Z
 thumb: skills-blog-.jpeg
+category: Education
 ---
-*Image Credit: Career Advancement Blog* 
-
-
-
 
 
 Are you still finding it hard to secure employment in South Africa even though you have matric, tertiary education, an undeniable skill or talent? I can imagine how frustrating that is, sometimes wonder if you must change careers or move abroad to get employment. Perhaps you didn’t know that there is a major demand for scarce skills in both the public and private sectors in South Africa, this is the time to know. 
@@ -19,8 +16,6 @@ A scarce skill is a competency that is highly lacking and needed in a certain in
 ### Why is it important to earn a scarce skill? 
 
 We understand the pressure to start thinking about your future when you get to matric or when finishing university. We are also understanding of the fact that not everyone makes it through matric or tertiary education, but should that be the case you have to have a plan for your future. 
-
-
 
 It is important to define other things you are able to do besides the socially conventional jobs that society glorifies. For example, digital media and marketing is a big deal. Technological skills and chef skills are in demand as well, so you need to know which other skills to earn that will secure you employment in South Africa.
 
