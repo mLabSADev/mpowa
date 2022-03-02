@@ -16,6 +16,12 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Date", name: "date", widget: "date", format: 'MMM D, YY' }
       - { label: "Image", name: "thumb", widget: "image" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["Employment", "Education", "Entrepreneurship"],
+        }
       - { label: "Body", name: "body", widget: "markdown" }

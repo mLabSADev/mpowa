@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { col, phoneImage } from './Blog.module.scss'
+import { col, phoneImage, content } from './Blog.module.scss'
 import { Stack } from '@mui/material'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -21,14 +21,16 @@ function Blog({ data }) {
             </div>
           </div>
           <div className={col} style={{ paddingBottom: 0 }}>
-            <GatsbyImage className={phoneImage} image={image} alt={data.markdownRemark.frontmatter.path} />
+            <GatsbyImage className={phoneImage} image={image} alt={data.markdownRemark.frontmatter.title} />
             {/* <StaticImage className={phoneImage} src="../images/gradienta-tHtZo3FLhPc-unsplash.jpg" alt="prototype" placeholder="blurred" /> */}
           </div>
         </section>
-        <Stack sx={{ pl: 20, pr: 20, pt: 10, pb: 10 }}>
-          <div className="bodyText" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}>
+          <div className={content}>
+            <div className="bodyText" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}>
           </div>
-        </Stack>
+          </div>
+          
+       
 
       </div>
 
@@ -44,11 +46,10 @@ query myQueryAndMyQuery ($article:String) {
     frontmatter: {title: {eq: $article}}
   ) {
     frontmatter {
-      path
       title
       author
       date
-      tags
+      
       thumb {
         childImageSharp {
           gatsbyImageData(quality: 100, width: 900, formats: AUTO, placeholder: BLURRED)

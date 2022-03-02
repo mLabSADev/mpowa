@@ -6,6 +6,7 @@ import Stack from '@mui/material/Stack';
 import { graphql } from 'gatsby'
 import Navigation from '../components/Navigation/Navigation'
 import { getImage } from "gatsby-plugin-image"
+
 function Blogs({ data }) {
   console.log(data)
   return (
@@ -27,9 +28,9 @@ function Blogs({ data }) {
           </Stack>
         </section>
         <div className={cardWrapper} style={{ justifyContent: 'center' }}>
-          {data.blogs.edges.map((c) => {
+          {data.blogs.edges.map((c, i) => {
             const image = getImage(c.node.frontmatter.thumb)
-            return (<NewsItem data={c} image={image} key={c.node.frontmatter.path} />)
+            return (<NewsItem data={c} image={image} key={c.node.frontmatter.title} index={i} />)
           })}
         </div>
       </div>
@@ -52,7 +53,6 @@ query BlogsQuery {
           slug
         }
         frontmatter {
-          path
           title
           date
           author

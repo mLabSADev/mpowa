@@ -1,7 +1,6 @@
 .main {
     box-sizing: border-box;
-    flex: 1;
-    min-width: 30%;
+    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -112,7 +111,7 @@
                     font-style: normal;
                     font-family: "Poppins-Light", serif;
                     color: #ffffff;
-                    font-size: .9em;
+                    font-size: 0.9em;
                 }
             }
             .author {
@@ -131,7 +130,7 @@
                     font-family: "Poppins", serif;
                     color: #ffffff;
                     margin: 0;
-                    font-size: .8em;
+                    font-size: 0.8em;
                 }
             }
         }
@@ -147,5 +146,10 @@
                 object-fit: cover;
             }
         }
+    }
+}
+@media only screen and (max-width: 900px) {
+    .main {
+        width: 95%;
     }
 }

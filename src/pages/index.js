@@ -196,7 +196,6 @@ query HomeQuery  {
           slug
         }
         frontmatter {
-          path
           title
           date
           author

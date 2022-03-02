@@ -73,59 +73,62 @@
     border-radius: 10px;
     margin-bottom: 90px;
 }
+@media only screen and (max-width: 900px) { //1024px
+    .navigation {
+        display: none;
+    }
+    .statWrapper,
+    .cardWrapper {
+        flex-direction: column;
+    }
+    .col {
+        background: bisque;
+        padding: 0px 0px;
+        .phoneImage {
+            width: 323px;
+            height: 405px;
+        }
+    }
+}
+// @media only screen and (max-width: 541px) {
+//     .navigation {
+//         display: none;
+//     }
+//     .cardWrapper {
+//         flex-direction: column;
+//     }
+//     .statWrapper,
+//     .cardWrapper {
+//         flex-direction: column;
+//     }
+//     .col {
+//         padding: 0px 0px;
+//         background: red;
+//         .phoneImage {
+//             width: 323px;
+//             height: 405px;
+//         }
+//     }
+// }
 
-@media only screen and (max-width: 400px) {
-    .logoWrapper,
-    .descWrapper {
-        padding: 20px;
-    }
-    .navigation {
-        display: none;
-    }
-    .col {
-        padding: 20px 0px;
-        .phoneImage {
-            width: 323px;
-            height: 405px;
-        }
-    }
-    .statWrapper,
-    .cardWrapper {
-        flex-direction: column;
-    }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-    .navigation {
-        display: none;
-    }
-    .statWrapper,
-    .cardWrapper {
-        flex-direction: column;
-    }
-    .col {
-        padding: 20px 0px;
-        .phoneImage {
-            width: 323px;
-            height: 405px;
-        }
-    }
-}
-@media only screen and (max-width: 541px) {
-    .navigation {
-        display: none;
-    }
-    .cardWrapper {
-        flex-direction: column;
-    }
-    .statWrapper,
-    .cardWrapper {
-        flex-direction: column;
-    }
-    .col {
-        padding: 20px 0px;
-        .phoneImage {
-            width: 323px;
-            height: 405px;
-        }
-    }
-}
+// @media only screen and (max-width: 400px) {
+//     .logoWrapper,
+//     .descWrapper {
+//         padding: 20px;
+//     }
+//     .navigation {
+//         display: none;
+//     }
+//     .col {
+//         background: blue;
+//         padding: 0px 0px;
+//         .phoneImage {
+//             width: 323px;
+//             height: 405px;
+//         }
+//     }
+//     .statWrapper,
+//     .cardWrapper {
+//         flex-direction: column;
+//     }
+// }

@@ -15,3 +15,28 @@
         overflow: visible;
     }
 }
+.content {
+    padding: 80px 160px;
+}
+@media only screen and (max-width: 900px) {
+    //1024px
+    .navigation {
+        display: none;
+    }
+    .statWrapper,
+    .cardWrapper {
+        flex-direction: column;
+    }
+    .content {
+        padding: 20px;
+    }
+    .col {
+        padding: 0px 0px;
+        .phoneImage {
+            width: 100%;
+            height: 405px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    }
+}

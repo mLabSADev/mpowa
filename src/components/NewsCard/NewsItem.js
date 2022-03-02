@@ -22,9 +22,12 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import IconButton from '@mui/material/IconButton';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
+import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import { Link } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image"
+import { motion } from 'framer-motion';
+var moment = require('moment');
 function NewsItem(data) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -38,11 +41,12 @@ function NewsItem(data) {
   const NODE = data.data.node
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
+  console.log(data)
   return (
-    <div className={main}>
+    <motion.div animate={{ opacity: 1 }} initial={{opacity: 0}} transition={{duration: 2, delay: 0.5 * data.index}} className={main}>
       <div className={top}>
         <div className={dateWrapper}>
-          <p className={dateStyle}>{NODE.frontmatter.date}</p>
+          <p className={dateStyle}> {NODE.frontmatter.category && (<Chip label={NODE.frontmatter.category} variant="outline" color='primary' />)} {moment(NODE.frontmatter.date).format('MMMM D, YYYY')}</p>
         </div>
         <div className={more}>
 
@@ -100,7 +104,7 @@ function NewsItem(data) {
           {/* <img className={imageCover} src={ImageBG} alt='Article Image' /> */}
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

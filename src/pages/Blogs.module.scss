@@ -25,3 +25,21 @@
     align-items: flex-start;
     overflow: visible;
 }
+@media only screen and (max-width: 900px) {
+    //1024px
+    .navigation {
+        display: none;
+    }
+    .statWrapper,
+    .cardWrapper {
+        flex-direction: column;
+    }
+    .col {
+        background: bisque;
+        padding: 0px;
+        .phoneImage {
+            width: 323px;
+            height: 405px;
+        }
+    }
+}
