@@ -47,6 +47,9 @@ module.exports = {
                 "heading[depth=1]": "title",
                 "heading[depth=2]": "subtitle",
                 paragraph: "para",
+                "list[ordered=false]": "unordered-list",
+                listItem: "list-item"
+                
               }
             }
           }

@@ -13,7 +13,8 @@ import {
   author,
   authorStyle,
   image,
-  imageCover
+  imageCover,
+  borderBG
 } from './style.module.scss'
 import MoreVertRoundedIcon from '@mui/icons-material/MoreVertRounded';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
@@ -43,68 +44,71 @@ function NewsItem(data) {
   const id = open ? 'simple-popover' : undefined;
   console.log(data)
   return (
-    <motion.div animate={{ opacity: 1 }} initial={{opacity: 0}} transition={{duration: 2, delay: 0.5 * data.index}} className={main}>
-      <div className={top}>
-        <div className={dateWrapper}>
-          <p className={dateStyle}> {NODE.frontmatter.category && (<Chip label={NODE.frontmatter.category} variant="outline" color='primary' />)} {moment(NODE.frontmatter.date).format('MMMM D, YYYY')}</p>
-        </div>
-        <div className={more}>
-
-
-          <IconButton color='primary' aria-describedby={id} variant="contained" onClick={handleClick}>
-            <MoreVertRoundedIcon />
-          </IconButton>
-          <Popover
-            color='dark'
-            id={id}
-            open={open}
-            anchorEl={anchorEl}
-            onClose={handleClose}
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
-            }}
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'right'
-            }}
-          >
-            <Stack direction="row" spacing={2} alignItems="center" >
-              <Typography sx={{ ml: 2 }} variant='body1'>Share</Typography>
-              <IconButton>
-                <FacebookRoundedIcon />
-              </IconButton>
-              <IconButton>
-                <TwitterIcon />
-              </IconButton>
-              <IconButton>
-                <WhatsAppIcon />
-              </IconButton>
-
-            </Stack>
-          </Popover>
-          {/* */}
-        </div>
-      </div>
-      <div className={articleWrapper}>
-        <div className={content}>
-          <div className={title}>
-
-            <Link className={titleStyle} to={`${NODE.fields.slug}`} >
-              {NODE.frontmatter.title.replaceAll('-', ' ')}
-            </Link>
-            <p className={descStyle}>{NODE.excerpt}</p>
+    <motion.div className={borderBG} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 0.3, delay: 0.3 * data.index, ease: 'easeIn' }}>
+      <motion.div  className={main}>
+        <div className={top}>
+          <div className={dateWrapper}>
+            <p className={dateStyle}> {NODE.frontmatter.category && (<Chip label={NODE.frontmatter.category} variant="outline" color='primary' />)} {moment(NODE.frontmatter.date).format('MMMM D, YYYY')}</p>
           </div>
-          <div className={author}>
-            <p className={authorStyle}>by {NODE.frontmatter.author}</p>
+          <div className={more}>
+
+
+            <IconButton color='primary' aria-describedby={id} variant="contained" onClick={handleClick}>
+              <MoreVertRoundedIcon />
+            </IconButton>
+            <Popover
+              color='dark'
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right'
+              }}
+            >
+              <Stack direction="row" spacing={2} alignItems="center" >
+                <Typography sx={{ ml: 2 }} variant='body1'>Share</Typography>
+                <IconButton>
+                  <FacebookRoundedIcon />
+                </IconButton>
+                <IconButton>
+                  <TwitterIcon />
+                </IconButton>
+                <IconButton>
+                  <WhatsAppIcon />
+                </IconButton>
+
+              </Stack>
+            </Popover>
+            {/* */}
           </div>
         </div>
-        <div className={image}>
-          <GatsbyImage className={imageCover} image={data.image} alt={NODE.frontmatter.title} />
-          {/* <img className={imageCover} src={ImageBG} alt='Article Image' /> */}
+        <div className={articleWrapper}>
+          <div className={content}>
+            <div className={title}>
+
+              <Link className={titleStyle} to={`${NODE.fields.slug}`} >
+                {NODE.frontmatter.title.replaceAll('-', ' ')}
+              </Link>
+              <p className={descStyle}>{NODE.excerpt}</p>
+            </div>
+            <div className={author}>
+              <p className={authorStyle}>by {NODE.frontmatter.author}</p>
+            </div>
+          </div>
+          <div className={image}>
+            <GatsbyImage className={imageCover} image={data.image} alt={NODE.frontmatter.title} />
+            {/* <img className={imageCover} src={ImageBG} alt='Article Image' /> */}
+          </div>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
+
   )
 }
 

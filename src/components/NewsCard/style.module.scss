@@ -1,3 +1,18 @@
+.borderBG {
+    padding: 1px;
+    background: rgb(83, 78, 78);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 20%,
+        rgba(62, 255, 103, 1) 40%,
+        rgba(60, 221, 255, 1) 45%,
+        rgba(255, 75, 75, 1) 50%,
+        rgba(255, 244, 71, 1) 55%,
+        rgba(0, 0, 0, 0) 80%
+    );
+    border-radius: 8px;
+    margin: 10px;
+}
 .main {
     box-sizing: border-box;
     width: 500px;
@@ -7,10 +22,10 @@
     align-items: flex-start;
     overflow: hidden;
     border-radius: 8px;
-    border: 1px solid #4a4a4a;
-    background: #1717178c;
+    border: 1px solid #41414107;
+    background-color: #171a1ae5;
     backdrop-filter: blur(50px);
-    margin: 10px;
+
     .top {
         box-sizing: border-box;
         width: 100%;

@@ -78,9 +78,9 @@ a:hover {
     word-wrap: break-word;
     word-break: break-word;
     overflow: hidden;
-    font-weight: 300;
+    /* font-weight: 400; */
     font-style: normal;
-    font-family: "Poppins-Thin", serif;
+    font-family: "Poppins", serif;
     color: #ffffff;
     font-size: 1em;
     line-height: 1.9;
