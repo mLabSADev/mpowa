@@ -5,8 +5,6 @@ date: 2022-02-28T07:59:45.283Z
 thumb: skills-blog-.jpeg
 category: Employment
 ---
-
-
 Are you still finding it hard to secure employment in South Africa even though you have matric, tertiary education, an undeniable skill or talent? I can imagine how frustrating that is, sometimes wonder if you must change careers or move abroad to get employment. Perhaps you didn’t know that there is a major demand for scarce skills in both the public and private sectors in South Africa, this is the time to know. 
 
 # What is a scarce skill? 
@@ -24,6 +22,12 @@ In the digital age we live in, there are a number of unusual job vacancies that 
 So what skills are in demand in South Africa that will guarantee you employment? 
 
 Higher Education and Training, Innovation and Science Minister, Blade Nzimande made an important announcement last year about skills that South Africa is short of. According to Nzimande, many young people enter education programmes that the country is not short of and that is “breeding unemployment”, he emphasised. 
+
+
+
+![](https://lh3.googleusercontent.com/lJplRJiyBgllsz_jHMeenPpzTUagrw_B7gCHoAFGEA1p7lfzWs0dv9YGWvO_S1yDbeULz7bX0boI2HR9HKxlBSiEjwrYKabqBBVoGHHWCgahnqesnBPOFl_9mFZ4zsXKX4nk_6E)
+
+
 
 ### Here is the list of scarce skills required in South Africa where you are likely to get employed: 
 
