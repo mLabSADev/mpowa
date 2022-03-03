@@ -23,7 +23,7 @@ It is made up of the internet supported area and the mobile one which uses wirel
 
 ## Here is how ICT can improve education in rural areas: 
 
-\    ![](https://lh3.googleusercontent.com/edcPYi35CC-KGKtNI2J4ke9HpWygEBj8jOUahvGOZyVekoVahh9PA_J9yKdVzvxEHZe05v57CFGwSo17xAeGQzj57Ur8DtUTM1hLxttNvRyEnFobvQ1UEY96R2EsNY10ghRHEcQ)
+## \    ![](https://lh3.googleusercontent.com/edcPYi35CC-KGKtNI2J4ke9HpWygEBj8jOUahvGOZyVekoVahh9PA_J9yKdVzvxEHZe05v57CFGwSo17xAeGQzj57Ur8DtUTM1hLxttNvRyEnFobvQ1UEY96R2EsNY10ghRHEcQ)
 
 
 
