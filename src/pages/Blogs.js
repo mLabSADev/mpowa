@@ -18,7 +18,7 @@ function Blogs({ data }) {
     if (val === 'all') {
       setFiltered(data.blogs.edges)
       setActiveFilter(val)
-      
+
       return;
     }
     setActiveFilter(val)
@@ -44,10 +44,10 @@ function Blogs({ data }) {
               <p className="bodyText" >
                 <Stack direction={{ xs: 'column', sm: 'row' }}
                   spacing={{ xs: 1, sm: 2, md: 4 }}>
-                  <Chip label="All" color='info' variant={activeFilter === 'all' ? 'filled': 'outlined'} clickable={true} onClick={() => { filterBlogs('all') }} />
-                  <Chip label="Employment" color='info'variant={activeFilter === 'Employment' ? 'filled': 'outlined'} clickable={true} onClick={() => { filterBlogs('Employment') }} />
-                  <Chip label="Education" color='info'variant={activeFilter === 'Education' ? 'filled': 'outlined'} clickable={true} onClick={() => { filterBlogs('Education') }} />
-                  <Chip label="Entrepreneurship" color='info'variant={activeFilter === 'Entrepreneurship' ? 'filled': 'outlined'} clickable={true} onClick={() => { filterBlogs('Entrepreneurship') }} />
+                  <Chip label="All" color='info' variant={activeFilter === 'all' ? 'filled' : 'outlined'} clickable={true} onClick={() => { filterBlogs('all') }} />
+                  <Chip label="Employment" color='info' variant={activeFilter === 'Employment' ? 'filled' : 'outlined'} clickable={true} onClick={() => { filterBlogs('Employment') }} />
+                  <Chip label="Education" color='info' variant={activeFilter === 'Education' ? 'filled' : 'outlined'} clickable={true} onClick={() => { filterBlogs('Education') }} />
+                  <Chip label="Entrepreneurship" color='info' variant={activeFilter === 'Entrepreneurship' ? 'filled' : 'outlined'} clickable={true} onClick={() => { filterBlogs('Entrepreneurship') }} />
                 </Stack>
 
               </p>
