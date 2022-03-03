@@ -5,7 +5,6 @@ import { Stack } from '@mui/material'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 function Blog({ data }) {
-  console.log(data)
   const image = getImage(data.markdownRemark.frontmatter.thumb)
   return (
     <Layout>
@@ -18,6 +17,7 @@ function Blog({ data }) {
                 <div className="line"></div>
               </div>
               <p className="bodyText">{data.markdownRemark.excerpt}</p>
+              <Stack label={data.markdownRemark.frontmatter.category} />
             </div>
           </div>
           <div className={col} style={{ paddingBottom: 0 }}>
@@ -49,7 +49,7 @@ query myQueryAndMyQuery ($article:String) {
       title
       author
       date
-      
+      category
       thumb {
         childImageSharp {
           gatsbyImageData(quality: 100, width: 900, formats: AUTO, placeholder: BLURRED)

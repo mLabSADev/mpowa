@@ -13,14 +13,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     `gatsby-plugin-image`,
     "gatsby-plugin-netlify",
-    "gatsby-transformer-sharp", {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "images",
-        "path": "./src/images/"
-      },
-      __key: "images"
-    },
+    "gatsby-transformer-sharp",
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -49,12 +42,28 @@ module.exports = {
                 paragraph: "para",
                 "list[ordered=false]": "unordered-list",
                 listItem: "list-item"
-                
+
               }
             }
           }
         ]
       }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "images",
+        "path": "./src/images/"
+      },
+      __key: "images"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "images",
+        "path": "./src/markdown/Blogs/"
+      },
+      __key: "images"
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -80,5 +89,31 @@ module.exports = {
         // Plugins configs
         plugins: [],
       },
-    },]
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              // [Optional] The root of "media_folder" in your config.yml
+              // Defaults to "static"
+              staticFolderName: 'static',
+              // [Optional] Include the following fields, use dot notation for nested fields
+              // All fields are included by default
+              include: ['featured'],
+              // [Optional] Exclude the following fields, use dot notation for nested fields
+              // No fields are excluded by default
+              exclude: ['featured.skip'],
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: { maxWidth: 1024, quality: 100, withWebp: true },
+          },
+        ]
+      }
+    }
+  ]
 };

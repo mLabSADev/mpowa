@@ -23,7 +23,6 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import IconButton from '@mui/material/IconButton';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
-import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import { Link } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -42,20 +41,22 @@ function NewsItem(data) {
   const NODE = data.data.node
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
-  console.log(data)
   return (
-    <motion.div className={borderBG} animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 0.3, delay: 0.3 * data.index, ease: 'easeIn' }}>
-      <motion.div  className={main}>
+    <motion.div layout className={borderBG}
+      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 100 }}
+      transition={{ duration: 0.2, delay: 0.2 * data.index, ease: 'easeIn' }}>
+      <motion.div className={main}>
         <div className={top}>
           <div className={dateWrapper}>
-            <p className={dateStyle}> {NODE.frontmatter.category && (<Chip label={NODE.frontmatter.category} variant="outline" color='primary' />)} {moment(NODE.frontmatter.date).format('MMMM D, YYYY')}</p>
+            <p className={dateStyle}>{NODE.frontmatter.category} - {moment(NODE.frontmatter.date).format('MMMM D, YYYY')}</p>
           </div>
           <div className={more}>
 
 
-            <IconButton color='primary' aria-describedby={id} variant="contained" onClick={handleClick}>
+            {/* <IconButton color='primary' aria-describedby={id} variant="contained" onClick={handleClick}>
               <MoreVertRoundedIcon />
-            </IconButton>
+            </IconButton> */}
             <Popover
               color='dark'
               id={id}
