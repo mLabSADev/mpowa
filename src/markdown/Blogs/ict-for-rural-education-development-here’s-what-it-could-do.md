@@ -15,7 +15,7 @@ Some of the issues that result in rural schools’ education low quality and uns
 
 Let’s look at how ICT (Information Communications Technology) can empower youth in rural areas through education. ICT is an in demand service used in the government, financial and business sectors. So it is highly important to address  the issues in the education quality in rural areas, considering ICT as an essential tool for rural education development. 
 
-# Are you reading and thinking, “I don’t even know what ICT is”? 
+## Are you reading and thinking, “I don’t even know what ICT is”? 
 
 ICT stands for Information Communications Technology, which in simple terms is defined as devices, systems, applications and networking elements that allow people and organisations to communicate in the digital world. 
 
@@ -23,11 +23,7 @@ It is made up of the internet supported area and the mobile one which uses wirel
 
 ## Here is how ICT can improve education in rural areas: 
 
-## \    ![](https://lh3.googleusercontent.com/edcPYi35CC-KGKtNI2J4ke9HpWygEBj8jOUahvGOZyVekoVahh9PA_J9yKdVzvxEHZe05v57CFGwSo17xAeGQzj57Ur8DtUTM1hLxttNvRyEnFobvQ1UEY96R2EsNY10ghRHEcQ)
-
-
-
-
+##   ![](https://lh3.googleusercontent.com/edcPYi35CC-KGKtNI2J4ke9HpWygEBj8jOUahvGOZyVekoVahh9PA_J9yKdVzvxEHZe05v57CFGwSo17xAeGQzj57Ur8DtUTM1hLxttNvRyEnFobvQ1UEY96R2EsNY10ghRHEcQ)
 
 * Motivate learners - If learners would have access to computers with internet connectivity, they would be motivated to learn because computers allow for interactions with other people in real time. ICTs like videos, television and multimedia software that blend text, sound, colourful and moving images, can be used to create real and challenging content that will engage learners in the learning process. 
 * Enhance teacher training and skills - You would find that teachers in rural areas are not computer literate. With the introduction of ICT, teachers will be forced to learn the skills. When they have been trained, that would mean the issue of illiteracy is close to being solved. 
@@ -36,7 +32,7 @@ It is made up of the internet supported area and the mobile one which uses wirel
 * Creative learning - Exposure to unlimited educational information gives learners the agency to become creative in terms of how they can manipulate the information, so much so that they could even create real - life products. Consequently, creative entrepreneurs are likely to be produced.
 * Evaluative learning  - This is another form of learning that builds critical thinkers and analytic individuals. ICT- supported learning does not recognise only one form of learning, which usually is to listen and remember. But with ICT, they are provided with the freedom of understanding information in ways that are helpful to them, unlike still and text based technologies. 
 
-### Recommendations to successfully implement ICT - supported education in rural areas 
+## Recommendations to successfully implement ICT - supported education in rural areas 
 
 * Provide money to install and improve electricity services in schools.
 * Provide teachers with training to better understand the types of software and teaching programs they need to invest in, to improve their ways of educating. 
