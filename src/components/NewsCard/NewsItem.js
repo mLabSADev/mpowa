@@ -27,7 +27,6 @@ import Stack from '@mui/material/Stack';
 import { Link } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image"
 import { motion } from 'framer-motion';
-var moment = require('moment');
 function NewsItem(data) {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -49,7 +48,7 @@ function NewsItem(data) {
       <motion.div className={main}>
         <div className={top}>
           <div className={dateWrapper}>
-            <p className={dateStyle}>{NODE.frontmatter.category} - {moment(NODE.frontmatter.date).format('MMMM D, YYYY')}</p>
+            <p className={dateStyle}>{NODE.frontmatter.category} - {NODE.frontmatter.date}</p>
           </div>
           <div className={more}>
 
