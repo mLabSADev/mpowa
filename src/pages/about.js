@@ -27,13 +27,14 @@ const About = () => {
             src="../images/banner.jpg"
             alt=""
           />
-          <video className="videoStyle" controls="true">
-            <source
-              src="https://firebasestorage.googleapis.com/v0/b/youth-services-platform.appspot.com/o/Blueprint%20June%202021%20mPowa.mp4?alt=media&amp;token=ff928a46-4382-4635-a670-bb28f73c88ec"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            width="100%"
+            src="https://www.youtube.com/embed/oI91qtrBBMg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </section>
         <section
           id="cta"
