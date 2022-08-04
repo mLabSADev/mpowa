@@ -29,6 +29,7 @@ const About = () => {
           />
           <iframe
             width="100%"
+            height="570"
             src="https://www.youtube.com/embed/oI91qtrBBMg"
             title="YouTube video player"
             frameborder="0"
