@@ -9,7 +9,7 @@ It is very important to be fully prepared for a job interview, it will make you 
 
 Interview preparation can be stressful, sometimes you feel nervous about meeting strangers who will eventually decide if you are getting the job or not. Pre-interview anxiety is common, things like talking about yourself, selling yourself, and being judged on your behaviour or appearance can make you nervous. 
 
-But in this age of advanced technology, you can maximise your chances of getting a job by using Artificial Intelligence (AI) technologies that will help you to better prepare yourself for an interview. 
+But in this age of advanced technology, you can maximise your chances of getting a job by using Artificial Intelligence (AI) technologies that will help you to better prepare yourself for an interview.
 
 ### **AI-powered Interview platforms to leverage**
 
