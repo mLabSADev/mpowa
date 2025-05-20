@@ -24,11 +24,7 @@ const Privacy = () => {
           <div className="titleLineWrapper">
 
             <div className='bodyText'>
-
-              <h1 id="privacy-policy">Privacy Policy</h1>
-              <p><strong>Effective Date:</strong> May 20, 2025<br><strong>App Name:</strong> mPowa</p>
-              <p>Thank you for using <strong>mPowa</strong>. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information.</p>
-              <h2 id="1-information-we-collect">1. Information We Collect</h2>
+             <h2 id="1-information-we-collect">1. Information We Collect</h2>
               <p>We collect the following types of personal information:</p>
               <h3 id="a-personal-information">a. Personal Information</h3>
               <ul>
